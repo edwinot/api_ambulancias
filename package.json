@@ -1,0 +1,21 @@
+{
+  "name": "ambulancias_api",
+  "version": "1.0.0",
+  "description": "API servicios wen crear ambulancia, obtener todas las ambualncias, obtener ambulancias cercanas",
+  "main": "app.js",
+  "scripts": {
+    "start-dev": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ambulancias"
+  ],
+  "author": "Eduyin",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
