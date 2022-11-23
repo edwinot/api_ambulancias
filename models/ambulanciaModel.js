@@ -1,10 +1,10 @@
 const mongoose = require('mongoose');
-const {Schema} = mongoose;
+const { Schema } = mongoose;
 
 const AmbulanciaSchema = new Schema(
     {
         placa: {
-            type:String,
+            type: String,
             unique: true,
             required: true
         },
@@ -14,10 +14,10 @@ const AmbulanciaSchema = new Schema(
         ubicacion_longitud: Number,
     },
     {
-        timestamps: true   
+        timestamps: true
     }
 );
 
-const  Ambulancia = mongoose.model("ambulancias", AmbulanciaSchema ) ;      
+const Ambulancia = mongoose.model("ambulancias", AmbulanciaSchema);
 
 module.exports = Ambulancia;
