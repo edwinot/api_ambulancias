@@ -1,4 +1,4 @@
-const {obtenerAmbulanciasService} = require('../services/ambulanciasService')
+const {obtenerAmbulanciasService, crearAmbulanciaService} = require('../services/ambulanciasService')
 
 const obtenerAmbulanciasCtrl = async (req, res) => {
     const filter = req.query;
@@ -6,6 +6,15 @@ const obtenerAmbulanciasCtrl = async (req, res) => {
     res.status(httpStatus).json(response) 
 }
 
+
+const crearAmbulanciaCtrl = async (req, res) => {
+    const ambulancia = req.body;
+    
+    const {response, httpStatus} = await crearAmbulanciaService(ambulancia);
+    res.status(httpStatus).json(response)
+}
+
 module.exports = {
-    obtenerAmbulanciasCtrl
+    obtenerAmbulanciasCtrl,
+    crearAmbulanciaCtrl
 }
